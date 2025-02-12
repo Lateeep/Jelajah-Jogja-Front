@@ -1,0 +1,309 @@
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #3f4e4f83;
+  border: 3px solid #3f4e4f;
+}
+
+#userMap .leaflet-routing-container {
+  display: none !important;
+}
+#userMap {
+  margin-top: 90px !important;
+  overflow-x: hidden;
+}
+
+/* map */
+#userMap .card-map {
+  padding: 10px 0;
+  background-color: var(--bg-secondary);
+  color: var(--txt-primary);
+}
+
+#userMap .card-map img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+#userMap .card-map p {
+  line-height: 25px;
+  text-transform: capitalize;
+}
+
+#userMap .card-map h5,
+#userMap .card-map a {
+  margin-top: 20px;
+  margin-bottom: 25px !important;
+  color: var(--txt-primary);
+  line-height: 35px;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+#userMap .card-map a:hover {
+  color: #a27b5c;
+}
+
+.leaflet-popup > a,
+.leaflet-popup > a > span {
+  font-size: 40px !important;
+  margin-top: 10px !important;
+  margin-right: 15px !important;
+  color: white !important;
+}
+
+#userMap .leaflet-popup-content-wrapper {
+  background-color: var(--bg-secondary);
+}
+#userMap .leaflet-popup-content-wrapper span {
+  color: var(--txt-primary) !important;
+}
+
+#userMap .leaflet-popup {
+  background-color: transparent;
+}
+
+.btn-destinasi:hover,
+.btn-reset:hover,
+.btn-lacak:hover,
+#userMap .leaflet-control-geocoder:hover,
+#userMap .leaflet-control-geocoder:hover button,
+#userMap .leaflet-control-geocoder:hover input {
+  background-color: #3f4e4f;
+  color: white !important;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.panduanLacakContainer {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 90px;
+  z-index: 2500;
+  padding: 40px 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.panduanLacak {
+  width: 100%;
+  background-color: #3f4e4f;
+  color: white;
+  left: 20px;
+  padding: 30px;
+}
+
+.panduanLacak .img_content_wrapper {
+  width: 100%;
+  height: 50%;
+  display: block;
+}
+.panduanLacak img {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.panduanLacak h4 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.panduanLacak button {
+  margin-top: 20px;
+}
+
+.panduanLacak hr {
+  border: 2px solid white;
+  opacity: 100%;
+  margin: 30px 0;
+}
+
+.img_wrapper_1 {
+  margin-bottom: 20px;
+}
+
+.caption_image {
+  position: absolute;
+  padding: 5px 20px;
+  background-color: #7e5f46;
+  border-radius: 10px 0 0 0;
+}
+.caption_image p {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* message */
+.message_container {
+  position: fixed;
+  top: 110px;
+  left: 20px;
+  z-index: 2000;
+}
+.message_item {
+  background-color: #3f4e4f;
+  padding: 10px 40px;
+  border-radius: 10px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.message_item h1 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+.message_item p {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+/* end message */
+
+/* peanduan */
+.petunjuk_container {
+  position: fixed;
+  bottom: 20px;
+  z-index: 2000;
+  left: 30px;
+  width: 40%;
+  opacity: 90%;
+}
+.panduan_item {
+  padding: 20px 40px;
+  background-color: #3f4e4f;
+  text-align: left;
+  border-radius: 10px;
+  color: white;
+  text-wrap: wrap;
+}
+.panduan_item h1 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.panduan_item p {
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+/* end peanduan */
+
+/* search */
+#userMap .leaflet-control-geocoder {
+  margin-top: 20px !important;
+  border: 2px solid #3f4e4f;
+  color: #3f4e4f;
+  padding: 5px 20px;
+  margin-right: 20px !important;
+  border-radius: 10px;
+  z-index: 5000 !important;
+  position: fixed;
+  top: 90px;
+  right: 0px;
+  /* z-index: 1000; */
+}
+#userMap .leaflet-control-geocoder input {
+  font-weight: 600 !important;
+  z-index: 5000 !important;
+}
+/* end search */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+  .img_wrapper_1 {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .arrow {
+    display: block;
+    position: fixed;
+    top: 170px;
+    left: 10px;
+    z-index: 1000;
+  }
+  .arrow i {
+    background-color: rgba(255, 255, 255, 0.719);
+    border-radius: 50%;
+    font-size: 40px;
+    color: black;
+    border: 2px solid black;
+  }
+  .guide_map.active {
+    left: 10px;
+  }
+  .guide_map {
+    display: flex;
+    transition: all 1s;
+    position: fixed;
+    top: 220px;
+    z-index: 500;
+    left: -600px;
+    width: fit-content;
+    flex-flow: column;
+    gap: 1rem;
+    background-color: #3f4e4f;
+    padding: 30px 20px;
+    opacity: 90%;
+    border-radius: 10px;
+  }
+  .guide_map button {
+    padding: 10px 0;
+    width: 260px;
+    color: white;
+    font-weight: 600;
+    background-color: #7e5f46;
+    border: none;
+    border-radius: 10px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .arrow {
+    display: none;
+  }
+  .guide_map {
+    opacity: 1;
+    position: absolute;
+    width: fit-content;
+    display: block;
+    background-color: transparent;
+    right: 20px;
+    top: 170px;
+    z-index: 500;
+  }
+  .guide_map button {
+    position: fixed;
+    right: 20px;
+    z-index: 500;
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 260px;
+    border: 2px solid #3f4e4f;
+    color: #3f4e4f !important;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.719);
+  }
+  .btn-destinasi {
+    top: 170px !important;
+  }
+
+  .btn-lacak {
+    top: 230px !important;
+  }
+
+  .btn-reset {
+    top: 290px !important;
+  }
+}
+@media only screen and (max-width: 912px) {
+  .petunjuk_container {
+    display: none !important;
+  }
+}

@@ -1,0 +1,48 @@
+.detail-gallery-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #3f4e4f;
+  text-align: center;
+}
+
+.main-detail-gallery {
+  margin-top: 120px;
+}
+
+.main-detail-gallery hr {
+  width: 20%;
+  border-width: 5px;
+  margin: auto;
+}
+
+.btn-review {
+  padding: 0px 12px;
+  background-color: #a27b5c;
+  color: white;
+  height: 42px;
+  font-weight: 600;
+}
+
+.btn-review:hover {
+  padding: 8px 12px;
+  border: 2px solid #a27b5c;
+  color: #a27b5c;
+}
+
+.star-container {
+}
+
+.content-review p {
+  font-size: 14px;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+.card-review {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.card-name {
+  font-size: 15px;
+  text-transform: capitalize;
+}

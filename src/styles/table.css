@@ -1,0 +1,150 @@
+.table-wraper #tableDatas_wrapper table {
+  width: 100% !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+.table-wraper #tableDatas_wrapper table th {
+  text-align: center !important;
+}
+
+.table-wraper {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
+
+.titleRow th{
+  color: white;
+  background-color: #2C3639 !important;
+}
+
+#tableDatas_wrapper {
+  width: 90% !important;
+}
+.odd,
+.even {
+  margin-bottom: 20px !important;
+  height: 100% !important;
+}
+.dtr-hidden {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn_edit{
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 12px !important;
+  background-color: #2C3639;
+  color: white;
+}
+
+.btn_edit:hover{
+  border: 2px solid #2C3639 !important;
+}
+@media (max-width: 1246px) {
+  thead tr th {
+    display: none !important;
+  }
+  tbody tr th {
+    display: none !important;
+  }
+  thead tr .sorting {
+    display: none !important;
+  }
+  .table-wraper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+  }
+  table {
+    min-width: 400px !important;
+    max-width: 100% !important;
+  }
+  td {
+    display: grid;
+    grid-template-columns: 35% auto;
+    padding: 1rem 2rem !important;
+    gap: 0.5rem !important;
+    border: none !important;
+  }
+  td:nth-child(2) {
+    grid-template-columns: auto;
+    font-size: 35px;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+
+    padding-top: 3rem !important;
+    border-radius: 20px 20px 0 0;
+  }
+  .wisataTr td:nth-child(8) {
+    margin-bottom: 2rem !important;
+    padding-bottom: 3rem !important;
+    border-radius: 0 0 20px 20px;
+  }
+  .wisataTr td:nth-child(8) .btn {
+    max-width: 100% !important;
+  }
+  .wisataTr td::before {
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  .wisataTr img {
+    min-width: 100% !important;
+    max-width: 250px !important;
+    min-height: 130px !important;
+    object-fit: cover;
+  }
+  .hotelTr img {
+    min-width: 100% !important;
+    max-width: 250px !important;
+    min-height: 130px !important;
+    object-fit: cover;
+  }
+  .hotelTr td:nth-child(7) {
+    margin-bottom: 2rem !important;
+    padding-bottom: 3rem !important;
+    border-radius: 0 0 20px 20px;
+  }
+  .wisataTr td:nth-of-type(2)::before {
+    content: "Kategori: ";
+  }
+  .wisataTr td:nth-of-type(3)::before {
+    content: "Lokasi: ";
+  }
+  .wisataTr td:nth-of-type(4)::before {
+    content: "Deskripsi: ";
+  }
+  .wisataTr td:nth-of-type(5)::before {
+    content: "Rating: ";
+  }
+  .wisataTr td:nth-of-type(6)::before {
+    content: "Image: ";
+  }
+  .wisataTr td:nth-of-type(7)::before {
+    content: "Aksi: ";
+  }
+  .hotelTr td:nth-of-type(2)::before {
+    content: "Lokasi: ";
+  }
+  .hotelTr td:nth-of-type(3)::before {
+    content: "Deskripsi: ";
+  }
+  .hotelTr td:nth-of-type(4)::before {
+    content: "Image: ";
+  }
+  .hotelTr td:nth-of-type(5)::before {
+    content: "Rating: ";
+  }
+  .hotelTr td:nth-of-type(6)::before {
+    content: "Aksi: ";
+  }
+}

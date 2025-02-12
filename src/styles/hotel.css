@@ -1,0 +1,1009 @@
+.heroHotel {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 0px;
+    text-align: center;
+    background-position: center;
+    background-color: black;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../public/images/HeroHotel.jpg");
+}
+
+#toggleFilter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #a27b5c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleFilter:hover {
+    background-color: #68503d;
+}
+
+#searchWisata {
+    position: relative; /* Pastikan elemen input punya posisi relatif */
+  }
+  
+  #suggestions {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color: #f8f9fa;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #searchWisata:focus + #suggestions {
+    display: block;
+  }
+  
+  .dropdown-content li {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .dropdown-content li:hover {
+    background-color: #f1f1f1;
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f8f9fa;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    list-style-type: none; /* Menghapus titik pada sebelah kiri */
+}
+
+.dropdown-content li span {
+    color: #888; /* Warna silang */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dropdown-content li span:hover {
+    color: #333; /* Warna ketika hover silang */
+}
+
+.dropdown-content li:hover {
+    background-color: #e0e0e0;
+}
+
+
+.dropdown-content li:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+}
+
+.checklist-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checklist-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+}
+
+.checklist-item label {
+    margin-left: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#filterForm label,
+#filterForm input {
+    margin: 0;
+    padding: 5px;
+}
+
+#filterForm button {
+    padding: 5px;
+    border: none;
+    background-color: #a27b5c;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#filterForm button:hover {
+    background-color: #68503d;
+}
+
+.slide-down {
+    animation: slideDown 0.5s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search-bar input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+#hotel-content {
+    transition: margin-top 0.3s ease;
+}
+
+.hotel-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hotel-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.hotel-info {
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+}
+
+.card-text i {
+    margin-right: 0.5rem;
+    width: 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #495057;
+}
+
+.room-types, .facilities {
+    margin-top: 1rem;
+}
+
+.badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.badge {
+    padding: 0.5em 0.8em;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.badge i {
+    margin-right: 3px;
+}
+
+.highlight {
+    border-color: #0d6efd;
+    background-color: #f8f9fa;
+}
+
+#hotelCards {
+    padding: 15px;
+    height: 600px;
+    overflow-y: auto;
+}
+
+#hotelCards::-webkit-scrollbar {
+    width: 8px;
+}
+
+#hotelCards::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#hotelCards::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+#hotelCards::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.hotel-card-dark {
+  background-color: #3F4E4F;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  transition: transform 0.3s ease;
+  margin-bottom: 100px;
+  height: 650px;
+}
+
+.hotel-card-dark:hover {
+  transform: translateY(-5px);
+}
+
+.hotel-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 15px;
+}
+
+.hotel-name {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.hotel-image-container {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.hotel-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hotel-details {
+  margin-bottom: 15px;
+}
+
+.info-text {
+  margin: 8px 0;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+.info-text i {
+  width: 20px;
+  margin-right: 10px;
+  color: #90cdf4;
+}
+
+.badge-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.facilities-badges, .room-type-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge-dark {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin: 3px;
+  display: inline-block;
+}
+
+/* Tipe Kamar Badges - menggunakan satu warna */
+.badge-dark.room {
+  background-color: #3498db; /* warna primary */
+  color: white;
+}
+
+/* Fasilitas Badges */
+.badge-dark.facility {
+  background-color: #3498db;
+  color: white;
+}
+
+.badge-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.room-type-section {
+  margin-bottom: 10px;
+}
+
+.section-label {
+  color: #b2bec3;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.room-type-badges, 
+.facilities-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Hover effects */
+.badge-dark:hover {
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .badge-dark {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+#hotelCards {
+  padding: 15px;
+  height: 600px;
+  overflow-y: auto;
+}
+
+#hotelCards::-webkit-scrollbar {
+  width: 8px;
+}
+
+#hotelCards::-webkit-scrollbar-track {
+  background: #2d3748;
+}
+
+#hotelCards::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 4px;
+}
+
+#hotelCards::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+.highlight {
+  box-shadow: 0 0 0 2px #4299e1;
+}
+
+.tracking-button {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.btn-track {
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.btn-track:hover {
+  background-color: #2c5282;
+  transform: translateY(-2px);
+}
+
+.btn-track i {
+  margin-right: 8px;
+}
+
+/* Styling untuk card hotel di HotelPageUser */
+.suggestion-box {
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  background: white;
+}
+
+.suggestion-item {
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+.suggestion-item:hover {
+  background-color: #f8f9fa;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-track, .btn-detail {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.btn-track {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-detail {
+  background-color: #2196F3;
+  color: white;
+}
+
+.btn-track:hover, .btn-detail:hover {
+  opacity: 0.9;
+  color: white;
+}
+
+.info-text i.fa-bed {
+  color: #9c27b0;
+}
+
+.badge.bg-primary {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  margin: 2px;
+}
+
+.hotel-details .info-text {
+  margin-bottom: 8px;
+}
+
+.hotel-details .info-text:last-child {
+  margin-bottom: 0;
+}
+
+/* Styling untuk card hotel di daftar hotel */
+.hotel-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: none;
+  overflow: hidden;
+  border-radius: 15px;
+  height: 500px;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hotel-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hotel-image-wrapper img {
+  transition: transform 0.3s;
+}
+
+.hotel-card:hover .hotel-image-wrapper img {
+  transform: scale(1.1);
+}
+
+.hotel-name-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.hotel-name {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: #DCD7C9;
+  font-weight: 600;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+}
+
+/* Search container styling */
+.search-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-container .input-group {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-container input {
+  border-right: none;
+}
+
+.search-container .btn {
+  border-left: none;
+}
+
+/* Dark theme hotel card styling */
+.hotel-card-dark {
+  background-color: #3F4E4F;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  width: 100%;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.hotel-card-dark:hover {
+  transform: translateY(-5px);
+}
+
+.hotel-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 15px;
+}
+
+.hotel-name {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.hotel-image-container {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.hotel-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hotel-details {
+  margin-bottom: 15px;
+}
+
+.info-text {
+  margin: 8px 0;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+.info-text i {
+  width: 20px;
+  margin-right: 10px;
+  color: #90cdf4;
+}
+
+.badge-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.facilities-badges, .room-type-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge-dark {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin: 3px;
+  display: inline-block;
+}
+
+/* Tipe Kamar Badges - menggunakan satu warna */
+.badge-dark.room {
+  background-color: #3498db; /* warna primary */
+  color: white;
+}
+
+/* Fasilitas Badges */
+.badge-dark.facility {
+  background-color: #3498db;
+  color: white;
+}
+
+.badge-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.room-type-section {
+  margin-bottom: 10px;
+}
+
+.section-label {
+  color: #b2bec3;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.room-type-badges, 
+.facilities-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Hover effects */
+.badge-dark:hover {
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .badge-dark {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Detail Hotel Styles */
+.hotel-hero {
+  position: relative;
+  width: 100%;
+  background: #000;
+  margin-bottom: 2rem;
+}
+
+.hotel-hero img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.hotel-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #DCD7C9;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.detail-hotel-title {
+  color: #2C3639;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.location {
+  font-size: 1.1rem;
+}
+
+.price-tag {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.badge {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+}
+
+.map-container {
+  height: 400px;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hotel-title {
+    font-size: 2rem;
+  }
+  
+  .map-container {
+    margin-top: 1rem;
+  }
+}
+
+/* Wisata Slider Styles */
+.wisata-slider {
+  position: relative;
+  padding: 0 40px;
+}
+
+.wisata-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  gap: 20px;
+  padding: 20px 0;
+  
+}
+
+.wisata-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.wisata-slide {
+  min-width: 250px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-height: 300px;
+}
+
+.wisata-slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.wisata-info {
+  padding: 15px;
+}
+
+.wisata-info h4 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.distance {
+  color: #DCD7C9;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .wisata-slide {
+    min-width: 250px;
+  }
+}
+
+.description-content {
+  color: #2C3639;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+.card-number {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #8B7355; /* Warna coklat seperti di gambar */
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 1;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.mySwipers {
+  height: 600px;
+  overflow: hidden;
+  padding: 40px 10px;
+}
+
+.mySwipers .swiper-wrapper {
+  height: 100%;
+}
+
+.mySwipers .swiper-slide {
+  height: 500px !important; /* Set tinggi tetap */
+  transition: all 0.3s ease;
+  visibility: hidden; /* Sembunyikan slide yang tidak aktif */
+  opacity: 0;
+}
+
+.mySwipers .swiper-slide-active {
+  visibility: visible; /* Tampilkan hanya slide aktif */
+  opacity: 1;
+  z-index: 2;
+}
+
+.hotel-card-dark {
+  background-color: #2d3436;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hotel-content {
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-number {
+  position: absolute;
+  top: 5px;
+  right: -10px;
+  background-color: #8B7355;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 3;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3498db;
+  z-index: 4;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 24px;
+}
+
+/* Pastikan konten dalam card tidak overflow */
+.hotel-image-container {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.hotel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-groups {
+  margin-top: auto;
+}

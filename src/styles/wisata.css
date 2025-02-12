@@ -1,0 +1,135 @@
+.alamItemCard {
+  margin-top: -76px; /* Sesuaikan dengan tinggi navbar */
+}
+
+.heroWisata, .heroBudaya {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 76px; /* Sesuaikan dengan tinggi navbar */
+  text-align: center;
+  background-position: center;
+  background-color: black;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../public/images/HeroWisataAlam.jpg"); /* Anda bisa ganti gambar sesuai kebutuhan */
+}
+
+.heroBudaya {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("../public/images/HeroWisataBudaya.jpg"); /* Anda bisa ganti gambar sesuai kebutuhan */
+}
+
+.hero_inner {
+  padding: 0 1rem;
+}
+
+.hero_title {
+  color: white;
+  font-weight: bold;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero_tagline {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.span_tagline {
+  display: block;
+}
+
+.wisata-card {
+  border: none;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.wisata-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  background: transparent;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .hero_title {
+    font-size: 2.5rem;
+  }
+  
+  .hero_tagline {
+    font-size: 1.2rem;
+  }
+}
+
+/* Search styling */
+.search-container {
+  margin-top: -20px;
+}
+
+.btn-search {
+  background-color: #A27B5C;
+  color: white;
+}
+
+.btn-search:hover {
+  background-color: #86664c;
+  color: white;
+}
+
+/* Card styling */
+.wisata-card {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+.boxTopSaran {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #A27B5C;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.boxTopSaran h3 {
+  color: white;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.card-title a {
+  color: #DCD7C9;
+}
+
+.card-title a:hover {
+  color: #A27B5C;
+}
+
+.location-text {
+  font-size: 0.9rem;
+  color: #DCD7C9;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  overflow: hidden;
+  display: -webkit-box;
+  color: #DCD7C9;
+  /* -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; */
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    margin-top: 0;
+  }
+} 
