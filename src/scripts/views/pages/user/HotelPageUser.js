@@ -662,7 +662,7 @@ const HotelPageUser = {
     // Fungsi untuk menampilkan semua hotel
     const displayAllHotels = async () => {
       try {
-        const response = await fetch('http://localhost:5000/hotel');
+        const response = await fetch('https://jelajah-jogja-back.vercel.app/hotel');
         const hotels = await response.json();
         
         const container = document.getElementById('allHotelsContainer');

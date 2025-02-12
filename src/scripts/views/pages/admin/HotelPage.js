@@ -19,7 +19,7 @@ window.deleteHotel = async (id) => {
     });
 
     if (result.isConfirmed) {
-      const response = await fetch(`http://localhost:5000/hotel/${id}`, {
+      const response = await fetch(`https://jelajah-jogja-back.vercel.app/hotel/${id}`, {
         method: 'DELETE',
       });
 
@@ -96,7 +96,7 @@ const HotelPage = {
     navLink.classList.add ('active');
 
     try {
-      const response = await fetch('http://localhost:5000/hotel', {
+      const response = await fetch('https://jelajah-jogja-back.vercel.app/hotel', {
         method: 'GET',
         headers: {
           'Accept': 'application/json',

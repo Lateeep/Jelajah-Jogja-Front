@@ -73,7 +73,7 @@ const BobotHotelPage = {
     // Fungsi untuk mengambil bobot yang sudah ada
     const loadExistingBobot = async () => {
       try {
-        const response = await fetch('http://localhost:5000/hotel-bobot');
+        const response = await fetch('https://jelajah-jogja-back.vercel.app/hotel-bobot');
         if (response.ok) {
           const data = await response.json();
           // Isi form dengan data yang ada
@@ -172,7 +172,7 @@ const BobotHotelPage = {
       }, {});
 
       try {
-        const response = await fetch('http://localhost:5000/hotel-bobot/update-all', {
+        const response = await fetch('https://jelajah-jogja-back.vercel.app/hotel-bobot/update-all', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
